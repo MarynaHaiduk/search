@@ -1,14 +1,18 @@
+import mapIcon from "../icons/MapPin.svg";
+
 export default function Museums() {
     const addresses = [
         {
             id: 1,
-            name: "Metropolitan museum",
-            address: "12 E 23rd St, New York"
+            name: "Metropolitan Museum",
+            address: "12 E 23rd St, New York,",
+            icon: mapIcon
         },
         {
             id: 2,
-            name: "Metropolitan museum",
-            address: "12 E 23rd St, New York"
+            name: "Brooklyn Museum",
+            address: "12 E 23rd St, New York,",
+            icon: mapIcon
         }
     ];
 
@@ -16,8 +20,9 @@ export default function Museums() {
         <div>
             {
                 addresses.map(el =>
-                    <div>
-                        <h3>{el.name}</h3>
+                    <div className="search-data">
+                        <img src={el.icon} alt="icon location" />
+                        <h3 className="title" ssN>{el.name}</h3>
                         <p>{el.address}</p>
                     </div>
                 )
