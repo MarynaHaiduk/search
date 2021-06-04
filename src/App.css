@@ -1,33 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: Open Sans, Semibold;
+    font-family: monospace;
+    color: #484848;
+    letter-spacing: -1px;
 }
 
 .main {
-    max-width: 376px;
+    max-width: 375px;
     margin: 30px auto;
+    heigth: 185px;
+    border: 1px solid #BFBFBF;
 }
 
-.container {
-    max-width: 376px;
-    border: 1px solid #00004D;
-    box-shadow: 0px 0px 6px #000029;
+.input-field {
+    width: 251px;
+    margin: auto;
 }
 
 input {
+    width: auto;
     opacity: 80%;
-    font-family: Open Sans, Regular;
-    font-size: 15pt;
+    height: 36px;
+    font-size: 20px;
+    margin-top: 1px;
+    margin-left: 1px;
 }
 
-.btn {
+input[type=text] {
+    letter-spacing: -1px;
+    word-spacing: -1px;
+}
+
+/* Flex container */
+.flex-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.item-1 {
+    width: 10%;
+    height: auto;
+    padding: 10px;
+}
+
+.item-2 {
+    width: 80%;
+    height: auto;
+    padding: 10px;
+    /*border-bottom: 2px solid #BFBFBF;*/
+    line-height: 1px;
+    word-spacing: -1px;
+}
+
+.item-3 {
+    width: 10%;
+    height: auto;
+    padding: 10px;
+}
+
+
+/* Text formatting */
+.title {
+    color: #484848;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.address {
+    font-size: 12.5px;
+    color: #6A6A6A;
+}
+
+.destination{
+    color: #6A6A6A;
+    font-size: 12.5px;
+}
+
+/* Buttons styling */
+.search-btn{
+    height: 30px;
+    border-radius: 15px;
+    font-size: 12.5px;
+    margin-right: 10px;
+    border: none;
+    color: #6A6A6A;
+}
+
+.search-btn:hover, .search-btn:active {
+    background-color: #484848;
+    color: #BFBFBF;
+}
+.btns {
     color: #808080;
-    font-size: 12px;
-    margin-left: 8px;
-    border-radius: 10px;
-    background-color: #E6E6E6;
+    height: 22px;
+    font-size: 13px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border-radius: 15px;
+    background-color: #F5F5F5;
+    border: none;
+    word-spacing: -2px;
 }
 
 .downtown-tour {
@@ -48,12 +128,4 @@ input {
 .night-tour {
     color: #fff;
     background-color: #AB66C7;
-}
-
-.title{
-    font-family: Open Sans, Semibold;
-    color: #484848;
-    opacity: 100%;
-    text-align: left;
-    font-size: 20px;
 }

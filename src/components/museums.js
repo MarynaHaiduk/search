@@ -1,6 +1,7 @@
 import mapIcon from "../icons/MapPin.svg";
 
 export default function Museums() {
+
     const addresses = [
         {
             id: 1,
@@ -17,15 +18,21 @@ export default function Museums() {
     ];
 
     return (
-        <div>
+        <div className="container">
             {
                 addresses.map(el =>
-                    <div className="search-data">
-                        <img src={el.icon} alt="icon location" />
-                        <h3 className="title" ssN>{el.name}</h3>
-                        <p>{el.address}</p>
-                    </div>
-                )
+                    <div className="flex-container">
+
+                        <div className="item-1">
+                            <img src={el.icon} alt="icon location" />
+                        </div>
+
+                        <div className="item-2">
+                            <h3 className="title">{el.name}</h3>
+                            <p className="address">{el.address}</p>
+                        </div>
+
+                    </div>)
             }
         </div>
     );
