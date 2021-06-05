@@ -79,6 +79,7 @@ function BusStops() {
                                     )
                                 }
                             </div>
+                            <hr/>
                         </div>
 
                     </div>)

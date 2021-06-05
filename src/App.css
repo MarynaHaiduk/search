@@ -79,13 +79,13 @@ input[type=text] {
     color: #6A6A6A;
 }
 
-.destination{
+.destination {
     color: #6A6A6A;
     font-size: 12.5px;
 }
 
 /* Buttons styling */
-.search-btn{
+.search-btn {
     height: 30px;
     border-radius: 15px;
     font-size: 12.5px;
@@ -98,6 +98,7 @@ input[type=text] {
     background-color: #484848;
     color: #BFBFBF;
 }
+
 .btns {
     color: #808080;
     height: 22px;

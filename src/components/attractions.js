@@ -31,7 +31,6 @@ export default function Attractions() {
                             <h3 className="title">{el.name}</h3>
                             <p className="address">{el.address}</p>
                         </div>
-
                     </div>)
             }
         </div>

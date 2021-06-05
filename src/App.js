@@ -1,47 +1,29 @@
 import './App.css';
 import {useState} from 'react';
-
 import Attractions from "./components/attractions";
 import BusStops from "./components/bus-stops";
 import Parks from "./components/parks";
 import Museums from "./components/museums";
-
 import Arrow from './icons/Arrow.svg';
 import Circle from "./icons/stop-circle.svg";
 import PlusCircle from "./icons/plus-circle.svg";
 import ArrowDownUp from "./icons/arrow-down-up.svg";
 
 function App() {
-    const displayComponents = [];
-    const [addComponent, setAddComponent] = useState(displayComponents);
 
-    const busStop = (id) => {
-        setAddComponent([
-            ...addComponent,
-            <BusStops/>
-        ])
-    };
+    const useVisibilityToggler = (component, visibility = false) =>{
+        const [visible, setVisibility] =useState(() => visibility);
+        return [
+            visible ? component : null, () => setVisibility(v => !v)
+        ]
+    }
 
-    const attractions = (id) => {
-        setAddComponent([
-            ...addComponent,
-            <Attractions/>
-        ])
-    };
-
-    const parks = (id) => {
-        setAddComponent([
-            ...addComponent,
-            <Parks/>
-        ])
-    };
-
-    const museums = (id) => {
-        setAddComponent([
-            ...addComponent,
-            <Museums/>
-        ])
-    };
+    const displayComponents = [<BusStops/>,<Attractions/>,<Parks/>, <Museums/>];
+    const [displayList, setDisplayList] = useState(displayComponents);
+    const [busVisibility, setBusVisibility] = useVisibilityToggler(<BusStops/>, true);
+    const [attractionsVisibility, setAttractionsVisibility] = useVisibilityToggler(<Attractions/>, true);
+    const [parksVisibility, setParksVisibility] = useVisibilityToggler(<Parks/>, true);
+    const [museumsVisibility, setMuseumsVisibility] = useVisibilityToggler(<Museums/>, true);
 
     return (
         <div className="main">
@@ -49,10 +31,10 @@ function App() {
                 <div className="container">
                     <div className="flex-container">
                         <div className="item-1">
-                            <img src={Arrow} alt="arrow" />
+                            <img src={Arrow} alt="arrow"/>
                         </div>
                         <div className="item-1">
-                            <img src={Circle} alt="circle" />
+                            <img src={Circle} alt="circle"/>
                         </div>
                         <div className="item-2">
                             <label htmlFor="location" className="form-label"></label>
@@ -73,7 +55,7 @@ function App() {
                     <div className="item-1">
                     </div>
                     <div className="item-1">
-                        <img src={PlusCircle} alt="arrow" />
+                        <img src={PlusCircle} alt="arrow"/>
                     </div>
                     <div className="item-2">
                         <p className="destination">Add destination</p>
@@ -84,31 +66,18 @@ function App() {
             <div className="container">
                 <div className="flex-container">
                     <div className="item-4">
-                        <button type="button"
-                                className="search-btn"
-                                onClick={(id) => busStop()}>Bus Stops
-                        </button>
-                        <button type="button"
-                                className="search-btn"
-                                onClick={(id) => attractions()}>Attractions
-                        </button>
-                        <button type="button"
-                                className="search-btn"
-                                onClick={(id) => parks()}>Parks
-                        </button>
-                        <button type="button"
-                                className="search-btn"
-                                onClick={(id) => museums()}>Museums
-                        </button>
+                        <button type="button" className="btns" onClick={setBusVisibility}>Bus Stops</button>
+                        <button type="button" className="btns" onClick={setAttractionsVisibility}>Attractions</button>
+                        <button type="button" className="btns" onClick={setParksVisibility}>Parks</button>
+                        <button type="button" className="btns" onClick={setMuseumsVisibility}>Museums</button>
+                        {busVisibility}
+                        {attractionsVisibility}
+                        {parksVisibility}
+                        {museumsVisibility}
                     </div>
                 </div>
                 <hr/>
             </div>
-
-            <div id="search">
-                {addComponent}
-            </div>
-
         </div>
     );
 }
