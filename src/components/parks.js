@@ -18,7 +18,7 @@ export default function Parks() {
     ];
 
     return (
-        <div className="container">
+        <div>
             {
                 parks.map(el =>
                     <div className="flex-container">
@@ -30,6 +30,7 @@ export default function Parks() {
                         <div className="item-2">
                             <h3 className="title">{el.name}</h3>
                             <p className="address">{el.address}</p>
+                            <hr/>
                         </div>
 
                     </div>)

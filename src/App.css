@@ -12,7 +12,7 @@ body {
 }
 
 .main {
-    max-width: 375px;
+    max-width: 380px;
     margin: 30px auto;
     heigth: 185px;
     border: 1px solid #BFBFBF;
@@ -41,30 +41,36 @@ input[type=text] {
 .flex-container {
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .item-1 {
     width: 10%;
     height: auto;
-    padding: 10px;
+    padding: 2px;
 }
 
 .item-2 {
     width: 80%;
     height: auto;
-    padding: 10px;
     /*border-bottom: 2px solid #BFBFBF;*/
     line-height: 1px;
     word-spacing: -1px;
+    padding: 2px;
 }
 
 .item-3 {
     width: 10%;
     height: auto;
     padding: 10px;
+    padding: 2px;
 }
-
+.item-4 {
+    width: 10%;
+    height: auto;
+    align-self: center;
+    padding: 2px;
+}
 
 /* Text formatting */
 .title {

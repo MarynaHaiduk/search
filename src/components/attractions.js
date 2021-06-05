@@ -18,21 +18,20 @@ export default function Attractions() {
     ];
 
     return (
-        <div className="container">
+        <>
             {
                 addresses.map(el =>
                     <div className="flex-container">
-
                         <div className="item-1">
-                            <img src={el.icon} alt="icon location" />
+                            <img src={el.icon} alt="icon location"/>
                         </div>
-
                         <div className="item-2">
                             <h3 className="title">{el.name}</h3>
                             <p className="address">{el.address}</p>
+                            <hr/>
                         </div>
                     </div>)
             }
-        </div>
+        </>
     );
 }

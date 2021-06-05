@@ -28,7 +28,7 @@ function App() {
     return (
         <div className="main">
             <form>
-                <div className="container">
+                <div>
                     <div className="flex-container">
                         <div className="item-1">
                             <img src={Arrow} alt="arrow"/>
@@ -43,7 +43,7 @@ function App() {
                             <input id="destination" type="text" className="form-control"
                                    placeholder="Choose destination"/>
                         </div>
-                        <div className="item-1">
+                        <div className="item-4">
                             <img text-align="right" src={ArrowDownUp} alt="arrow" height="14px" weight="14px"/>
                         </div>
                     </div>
@@ -58,25 +58,26 @@ function App() {
                         <img src={PlusCircle} alt="arrow"/>
                     </div>
                     <div className="item-2">
-                        <p className="destination">Add destination</p>
+                        <p></p>
+                        <span className="destination">Add destination</span>
                     </div>
                 </div>
-            </div>
 
-            <div className="container">
                 <div className="flex-container">
-                    <div className="item-4">
+                    <div>
                         <button type="button" className="btns" onClick={setBusVisibility}>Bus Stops</button>
                         <button type="button" className="btns" onClick={setAttractionsVisibility}>Attractions</button>
                         <button type="button" className="btns" onClick={setParksVisibility}>Parks</button>
                         <button type="button" className="btns" onClick={setMuseumsVisibility}>Museums</button>
-                        {busVisibility}
-                        {attractionsVisibility}
-                        {parksVisibility}
-                        {museumsVisibility}
+                        <hr/>
                     </div>
                 </div>
-                <hr/>
+                <div>
+                    {busVisibility}
+                    {attractionsVisibility}
+                    {parksVisibility}
+                    {museumsVisibility}
+                </div>
             </div>
         </div>
     );

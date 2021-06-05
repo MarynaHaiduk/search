@@ -54,7 +54,7 @@ function BusStops() {
     ];
 
     return (
-        <div>
+        <>
             {
                 busStops.map(el =>
                     <div className="flex-container">
@@ -84,7 +84,7 @@ function BusStops() {
 
                     </div>)
             }
-        </div>
+        </>
     );
 }
 
