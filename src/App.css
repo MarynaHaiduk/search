@@ -56,13 +56,11 @@ input[type=text] {
     /*border-bottom: 2px solid #BFBFBF;*/
     line-height: 1px;
     word-spacing: -1px;
-    padding: 2px;
 }
 
 .item-3 {
     width: 10%;
     height: auto;
-    padding: 10px;
     padding: 2px;
 }
 .item-4 {

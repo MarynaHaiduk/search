@@ -50,7 +50,7 @@ function App() {
                 </div>
             </form>
 
-            <div className="container">
+            <div>
                 <div className="flex-container">
                     <div className="item-1">
                     </div>
